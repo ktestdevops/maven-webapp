@@ -13,9 +13,9 @@ RUN curl -O http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.61/bin/apache-to
 RUN tar xzvf apache-tomcat-7.0.61.tar.gz  -C /opt/
 RUN cp -R /opt/apache-tomcat-7.0.61/ /opt/tomcat/
 
-WORKDIR /opt/tomcat/webapps
+WORKDIR /opt/tomcat/apache-tomcat-7.0.61/webapps
 COPY target/webapp.war .
 
 EXPOSE 8080
 
-ENTRYPOINT ["/opt/tomcat/bin/catalina.sh", "run"]
+ENTRYPOINT ["/opt/tomcat/apache-tomcat-7.0.61/bin/catalina.sh", "run"]
