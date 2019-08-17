@@ -10,7 +10,7 @@ RUN mkdir /opt/tomcat/
 
 WORKDIR /opt
 RUN curl -O http://us.mirrors.quenda.co/apache/tomcat/tomcat-8/v8.5.42/bin/apache-tomcat-8.5.42.tar.gz
-RUN tar -xzvf apache-tomcat-8.5.42.tar.gz  -C /opt/
+RUN tar xzvf apache-tomcat-8.5.42.tar.gz  -C /opt/
 RUN cp -R /opt/apache-tomcat-8.5.42/ /opt/tomcat
 
 WORKDIR /opt/tomcat/webapps
